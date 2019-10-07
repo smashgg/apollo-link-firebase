@@ -2,7 +2,7 @@ import { ApolloLink, Observable, FetchResult, Operation, NextLink } from 'apollo
 import { database as firebaseDatabase } from 'firebase';
 export default class RtdbSubLink extends ApolloLink {
     private database;
-    constructor({ database }: {
+    constructor({database}: {
         database: firebaseDatabase.Database;
     });
     request(operation: Operation, forward?: NextLink): Observable<FetchResult>;
